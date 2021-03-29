@@ -1,6 +1,7 @@
 # Boilerplate Code :: Polling App with Angular
 - For beginners
-We'll use this code as a 
+- Prerequisites: Basics of HTML, CSS and JavaScript
+We'll use this code as a beginning.
 
 ### Setup instructions
 - Setup an account on https://firebase.google.com (and create a project there if possible)
