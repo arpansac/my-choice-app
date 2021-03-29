@@ -1,0 +1,34 @@
+<!-- <p>my-choice works!</p>
+<p>
+    {{ tempVal }}
+</p> -->
+
+<div class="my-choice-game">
+    <div class="choice-form">
+      <form [formGroup]="choicesForm" (ngSubmit)="createChoice()">
+        <!-- <input formControlName="name" placeholder="Write name here..."> -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" placeholder="Write name here...">
+        </mat-form-field>
+  
+        <button [disabled]="!choicesForm.valid" type="submit" mat-raised-button  color="primary">Submit</button>
+      </form>
+    </div>
+  
+    <div  *ngIf="choicesList.length > 0">
+      <ul class="choices-list">
+        <li class="choice" *ngFor="let ch of choicesList" (click)="upvote(ch)">
+          <mat-card>
+            <mat-card-content>
+              <h3>
+                {{ ch.name }}
+              </h3>
+              <p>{{ ch.votes }} <small>votes</small></p>
+            </mat-card-content>
+          </mat-card>
+  
+        </li>
+      </ul>
+    </div>
+  </div>
