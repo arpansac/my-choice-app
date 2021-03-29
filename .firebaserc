@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-choice-app-2fc15": {
+      "hosting": {
+        "my-choice-app": [
+          "my-choice-app-2fc15"
+        ]
+      }
+    }
+  }
+}
