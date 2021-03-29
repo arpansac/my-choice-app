@@ -12,6 +12,8 @@ We'll use this code as a beginning.
 - Open Terminal in VS Code
   - Run `npm install -g firebase-tools`
   - Run `npm install`
+  - Run `ng serve` 
+  - Open Google Chrome and go to `localhost:4200`, you will see a message that this code works!
 
 
 
