@@ -1,4 +1,4 @@
-# Boilerplate Code Polling App with Angular
+# Boilerplate Code :: Polling App with Angular
 - For beginners
 We'll use this code as a 
 
