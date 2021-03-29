@@ -11,7 +11,7 @@ export class MyChoiceComponent implements OnInit {
 
   // tempVal = 100;
 
-  choicesList = [];
+  choicesList = <any>[];
 
   choicesForm = this.fb.group({
     name: ['', Validators.required],
@@ -38,10 +38,10 @@ export class MyChoiceComponent implements OnInit {
   createChoice() {
     // this funciton will send a request to the db to creata a choice
     this.choicesService.addChoice(this.choicesForm.value);
-    this.choicesForm.get('name').reset();
+    this.choicesForm.reset();
   }
 
-  upvote(choice) {
+  upvote(choice: any) {
     this.choicesService.addVote(choice);
   }
 
