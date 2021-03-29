@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ChoicesService } from 'src/app/services/choices.service';
 
 @Component({
   selector: 'app-my-choice',
@@ -19,10 +20,30 @@ export class MyChoiceComponent implements OnInit {
 
 
   constructor(
+    private choicesService: ChoicesService,
     private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
+
+    this.choicesService.choices.subscribe(
+      data => {
+        this.choicesList = data;
+        console.log(data);
+      }
+    );
   }
+
+
+  createChoice() {
+    // this funciton will send a request to the db to creata a choice
+    this.choicesService.addChoice(this.choicesForm.value);
+    this.choicesForm.get('name').reset();
+  }
+
+  upvote(choice) {
+    this.choicesService.addVote(choice);
+  }
+
 
 }
